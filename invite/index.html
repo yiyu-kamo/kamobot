@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可茂Bot | 招待</title>
+    <link rel="stylesheet" href="https://yiyu-kamo.github.io/kamobot/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="https://yiyu-kamo.github.io/kamobot/">
+                <img src="https://yiyu-kamo.github.io/kamobot/Kani.png" alt="可茂ロゴ" class="logo">
+            </a>
+            <h1>可茂</h1>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    <div class="section features">
+        <div data-aos="fade-up" class="feature-container">
+            <div class="feature-text">
+                <h2>可茂Botを招待する</h2>
+                <a href="https://yiyu-kamo.github.io/kamobot/termsofservice/" target="_blank" class="white-link">利用規約</a>
+                <label>
+                    <input type="checkbox" id="termsCheckbox"> 利用規約に同意する
+                </label>
+                <a href="https://discord.com/oauth2/authorize?client_id=1342822309916053525&permissions=633318697598967&integration_type=0&scope=bot+applications.commands" class="invite" id="inviteButton">招待</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="links">
+            <a href="https://yiyu-kamo.github.io/kamobot/" class="white-link">ホーム</a>
+            <a href="https://yiyu-kamo.github.io/kamobot/invite/" class="white-link">招待</a>
+            <a href="https://yiyu-kamo.github.io/kamobot/commands/" class="white-link">コマンド</a>
+            <a href="https://yiyu-kamo.github.io/kamobot/support/" class="white-link">お問い合わせ</a>
+            <a href="https://yiyu-kamo.github.io/kamobot/termsofservice/" class="white-link">利用規約</a>
+            <a href="https://yiyu-kamo.github.io/kamobot/privacy/" class="white-link">プライバシーポリシー</a>
+        </div>
+        <div class="footer-line"></div>
+        <div class="copyright">
+            Copyright © 2024 いゆかも工房 All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.getElementById("inviteButton").addEventListener("click", function(event) {
+            if (!document.getElementById("termsCheckbox").checked) {
+                event.preventDefault();
+                alert("利用規約に同意してください。");
+            }
+        });
+    </script>
+</body>
+</html>
