@@ -1,0 +1,155 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background-image: url("https://yiyukamo.web.fc2.com/kamobot/image/back.png");
+    background-size: cover;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+h1 {
+    font-size: 28px;
+    color: white;
+    white-space: nowrap;
+}
+
+.section {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer {
+    height: 200px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.invite, .commands {
+    padding: 15px 25px;
+    border: 2px solid gray;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+
+a {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.invite {
+    background-color: #605ceb;
+    color: white;
+    padding: 15px 25px;
+    border: 2px solid gray;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.invite:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.white-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.commands {
+    background-color: transparent;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    min-height: 700px;
+    height: auto;
+}
+
+.feature-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(87, 83, 236, 0.1);
+    text-align: left;
+    border: 2px solid gray;
+}
+
+.feature-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-line {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+
+.links a {
+    color: white;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.sub-title {
+    font-size: 32px;
+    text-align: center;
+    color: white;
+}
