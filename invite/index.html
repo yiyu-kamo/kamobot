@@ -36,8 +36,8 @@
                 <script>
                     const inviteButton = document.getElementById("inviteButton");
                     const termsCheckbox = document.getElementById("termsCheckbox");
-                    const kamoRadio = document.getElementById("kamoguildRadio");
-                    const kamondRadio = document.getElementById("kamondguildRadio");
+                    const kamoguildRadio = document.getElementById("kamoguildRadio");
+                    const kamondguildRadio = document.getElementById("kamondguildRadio");
                 
                     function validateForm() {
                         const agreed = termsCheckbox.checked;
@@ -46,8 +46,8 @@
                     }
                 
                     termsCheckbox.addEventListener("change", validateForm);
-                    kamoRadio.addEventListener("change", validateForm);
-                    kamondRadio.addEventListener("change", validateForm);
+                    kamoguildRadio.addEventListener("change", validateForm);
+                    kamondguildRadio.addEventListener("change", validateForm);
                 
                     inviteButton.addEventListener("click", () => {
                         if (kamoguildRadio.checked) {
