@@ -45,7 +45,7 @@
                 
                     function validateForm() {
                         const agreed = termsCheckbox.checked;
-                        const selected = kamoguildRadio.checked || kamondguildRadio.checked;
+                        const selected = kamoguildRadio.checked || kamondguildRadio.checked || kamouserRadio.checked || kamonduserRadio.checked;
                         inviteButton.disabled = !(agreed && selected);
                     }
                 
