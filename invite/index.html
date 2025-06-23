@@ -29,7 +29,9 @@
                 <label><input type="checkbox" id="termsCheckbox"> 利用規約に同意する</label><br><br>
                 
                 <label><input type="radio" name="botSelect" id="kamoguildRadio" value="kamo"> 可茂(サーバー)</label>
-                <label><input type="radio" name="botSelect" id="kamondguildRadio" value="kamond"> 可茂ンド(サーバー)</label><br><br>
+                <label><input type="radio" name="botSelect" id="kamondguildRadio" value="kamond"> 可茂ンド(サーバー)</label><br>
+                <label><input type="radio" name="botSelect" id="kamouserRadio" value="kamo"> 可茂(ユーザー)</label>
+                <label><input type="radio" name="botSelect" id="kamonduserRadio" value="kamond"> 可茂ンド(ユーザー)</label><br><br>
                 
                 <button class="invite" id="inviteButton" disabled>導入</button>
                 
@@ -38,6 +40,8 @@
                     const termsCheckbox = document.getElementById("termsCheckbox");
                     const kamoguildRadio = document.getElementById("kamoguildRadio");
                     const kamondguildRadio = document.getElementById("kamondguildRadio");
+                    const kamouserRadio = document.getElementById("kamouserRadio");
+                    const kamonduserRadio = document.getElementById("kamonduserRadio");
                 
                     function validateForm() {
                         const agreed = termsCheckbox.checked;
@@ -48,12 +52,18 @@
                     termsCheckbox.addEventListener("change", validateForm);
                     kamoguildRadio.addEventListener("change", validateForm);
                     kamondguildRadio.addEventListener("change", validateForm);
+                    kamouserRadio.addEventListener("change", validateForm);
+                    kamonduserRadio.addEventListener("change", validateForm);
                 
                     inviteButton.addEventListener("click", () => {
                         if (kamoguildRadio.checked) {
                             window.location.href = "https://discord.com/oauth2/authorize?client_id=1342822309916053525&permissions=633318697598967&integration_type=0&scope=bot+applications.commands";
                         } else if (kamondguildRadio.checked) {
                             window.location.href = "https://discord.com/oauth2/authorize?client_id=1386284881189015592&permissions=633318697598967&integration_type=0&scope=bot+applications.commands";
+                        } else if (kamouserRadio.checked) {
+                            window.location.href = "https://discord.com/oauth2/authorize?client_id=1342822309916053525&permissions=633318697598967&integration_type=1&scope=bot+applications.commands";
+                        } else if (kamonduserRadio.checked) {
+                            window.location.href = "https://discord.com/oauth2/authorize?client_id=1386284881189015592&permissions=633318697598967&integration_type=1&scope=bot+applications.commands";
                         }
                     });
                 </script>
