@@ -54,7 +54,7 @@ h1 {
     gap: 20px;
 }
 
-.invite, .commands {
+.invite, .commands, .kamoseries {
     padding: 15px 25px;
     border: 2px solid gray;
     text-decoration: none;
