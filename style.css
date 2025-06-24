@@ -76,6 +76,8 @@ h1, .main-title {
     border-radius: 5px;
     color: white;
     cursor: pointer;
+    min-width: 120px;
+    text-align: center;
 }
 
 .invite {
@@ -153,6 +155,7 @@ footer {
 
     .buttons {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 }
