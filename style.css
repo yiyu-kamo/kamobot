@@ -1,11 +1,12 @@
 body {
-    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
     min-height: 100vh;
-    width: auto;
-    height: auto;
-    overflow: visible;
+    overflow-x: hidden;
     background-image: url("https://yiyu-kamo.github.io/kamobot/image/back.jpg");
     background-size: cover;
+    background-position: center;
     text-align: center;
     font-family: Arial, sans-serif;
     color: white;
@@ -24,25 +25,35 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: clamp(40px, 10vw, 60px);
+    height: auto;
 }
 
-h1 {
-    font-size: 28px;
+h1, .main-title {
+    font-size: clamp(24px, 5vw, 48px);
     color: white;
     white-space: nowrap;
+    margin: 10px 0;
+}
+
+.sub-title {
+    font-size: clamp(18px, 4vw, 32px);
+    color: white;
+    margin-bottom: 20px;
 }
 
 .section {
-    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 700px;
+    padding: 20px;
 }
 
 .spacer {
@@ -51,34 +62,24 @@ h1 {
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .invite, .commands, .kamoseries {
-    padding: 15px 25px;
+    padding: 12px 20px;
     border: 2px solid gray;
     text-decoration: none;
-    font-size: 20px;
+    font-size: clamp(14px, 2.5vw, 20px);
     font-weight: bold;
     border-radius: 5px;
     color: white;
-}
-
-a {
-    color: white !important;
-    text-decoration: underline;
+    cursor: pointer;
 }
 
 .invite {
     background-color: #605ceb;
-    color: white;
-    padding: 15px 25px;
-    border: 2px solid gray;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .invite:disabled {
@@ -86,40 +87,39 @@ a {
     cursor: not-allowed;
 }
 
-.white-link {
-    color: white;
+a, .white-link, .links a {
+    color: white !important;
     text-decoration: underline;
-}
-
-.commands {
-    background-color: transparent;
+    margin: 10px;
 }
 
 .features {
     display: flex;
-    justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
     min-height: 700px;
-    height: auto;
 }
 
 .feature-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(87, 83, 236, 0.1);
-    text-align: left;
+    text-align: center;
     border: 2px solid gray;
 }
 
 .feature-image {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
-    margin-right: 20px;
+    margin: 0 0 10px 0;
 }
 
 footer {
@@ -127,6 +127,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .footer-line {
@@ -135,27 +136,23 @@ footer {
     background-color: gray;
 }
 
-.links a {
-    color: white;
-    text-decoration: underline;
-    margin: 10px;
-}
-
-.main-title {
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
-
-.sub-title {
-    font-size: 32px;
-    text-align: center;
-    color: white;
-}
-
 .text-image {
-  height: 1em;
-  width: auto;
-  vertical-align: middle;
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
