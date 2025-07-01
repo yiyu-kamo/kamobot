@@ -67,7 +67,7 @@ h1, .main-title {
     justify-content: center;
 }
 
-.invite, .commands, .kamoseries {
+.invite, .commands, .kamoseries, .forms {
     padding: 12px 20px;
     border: 2px solid gray;
     text-decoration: none;
